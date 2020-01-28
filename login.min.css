@@ -4,8 +4,8 @@ body
 	padding: 0;
 	background-image: url(https://i.pinimg.com/originals/42/f8/d1/42f8d12ac3db780d86702ed38ae52cb4.jpg);
 	backgroun-repeat: no-repeat;
-	height: cover;
-	width: cover;
+	height: 100%;
+	width: 100%
 	background-size: cover;
 	background-position: center;
 	font-family: Gill Sans MT;
