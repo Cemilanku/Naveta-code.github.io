@@ -1,1 +1,1 @@
-# Naveta-code.com
+# Naveta-code.github.io
