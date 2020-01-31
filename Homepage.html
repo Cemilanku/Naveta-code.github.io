@@ -36,51 +36,50 @@
 		text-align: center;
 		margin-top: 20px;
 	}
-	.nav {
+	.logo img{
 		background-color: #fff;
-	}
-
-	.nav ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-	}
-
-	.nav ul .icon {
-		margin-left: 40%;
-	}
-	.nav ul .login {
-		float: right;
-	}
-
-
-	.nav ul .login a {
+		opacity: 80%;
 		display: inline-block;
-		color: black;
-		text-align: center;
-		padding-left: 14px;
-		padding-right: 14px;
-		padding-top: 16px;
-		padding-bottom: 16px;
-		text-decoration: none;
+		height: auto;
+		padding: auto;
+		float: center;
+		border: 1px solid #fff;
+		transition: 0.5s ease;
+		margin-top: 2%;
+		margin-left: 2%;
 	}
-
-	.nav li a:hover{
+	.login ul{
+		list-style-type: none;
+		text-align: center;
+	}
+	.login ul li{
+		display: inline-block;
+	}
+	.login ul li a{
+		text-decoration: none;
+		color: #fff;
+		padding: 10px 50px;
+		border: 1px solid #fff;
+		transition: 0.5s ease;
+	}
+	.login ul li a:hover{
 		background-color: #fff;
+		color: #000;
+	}
+	.template{
+		background-color: #fff;
+		opacity:50%;
 	}
 </style>
 </head>
 <body>
-    <div class="nav">
-	<ul>
-	<li class="icon"><a href="https://naveta-code.github.io"><img class="logo"
-        src="https://naveta-code.github.io/temp.jpg"></a></li>
-	<li class="login"><a href="naveta-code.github.io/login.html">Login</a></li>
-	</ul>
-     </div>
+	<div class="top-bar">
+		<div class="logo">
+			<a href="https://naveta-code.github.io/Homepage.html"><img src="https://naveta-code.github.io/templ.png"></a>
+		</div>
+	</div>
 <center>
-	<h1>Welcome To Naveta-Code!</h1>
+	<h1>WELCOME TO NAVETA-CODE!</h1>
 </center>
 
 <div class="jam-digital-malasngoding">
@@ -93,6 +92,11 @@
 	<div class="kotak">
 		<p id="menit"></p>
 	</div>
+</div>
+<div class="login">
+	<ul>
+		<li><a href="https://naveta-code.github.io/login.html">LOGIN</a></li>
+	</ul>
 </div>
 
 
@@ -109,8 +113,8 @@
 </script>
     <div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;">
         <a title="Making Any Website" target="_blank" href="https://naveta-code.github.io">
-            <img class="template" src="https://naveta-code.github.io/temp.jpg" alt="naveta-code.github.io">
+            <img class="template" src="https://naveta-code.github.io/templ.png" alt="naveta-code.github.io">
         </a>
-</div>
+		</div>
 </body>
 </html>
