@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^naveta-code.github.io$
+RewriteRule (.*) http://www.naveta-code.github.io/$1 [R=301,L]
