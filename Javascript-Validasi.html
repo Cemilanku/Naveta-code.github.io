@@ -1,0 +1,199 @@
+<html><head>
+    <title>Ngobar | Validasi Javascript</title>
+    <link href="https://naveta-code.github.io/Icon.png" rel="shortcut icon">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=ege">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+    	*{
+     		margin:0;
+      		padding:0;
+      	  	}
+		body {
+			height: auto;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			font-family: Gill Sans MT;
+		    }
+		nav {
+			background-color: #ffffff;
+			}
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			}
+		nav > ul > li {
+			float: left;
+			}
+		nav li a {
+			display: inline-block;
+			color: black;
+			font-family: fantasy;
+			text-align: center;
+			font-size: 23px;
+			padding: 14px 16px;
+			text-decoration: none;
+			}
+		nav li a:hover{
+			background-color: grey;
+			}
+		.nav-brand{
+			height:30px;
+			width: 120px;
+			}
+	</style>
+	<style class="content">
+		.content{
+			background-color: #444444;
+			height: auto;
+			width: 100%;
+			overflow: hidden;
+		}
+		.isi{
+			font-family: sans-serif;
+			font-size: 15px;
+			color: #fff;
+		}
+		.code-container{
+			float: left;
+			background-color: rgba(255, 255, 255, 0.164);
+			color: black;
+			width: 100%;
+			height: auto;
+		}
+		.code{
+			color: black;
+			font-family: sans-serif;
+			font-size: 15px;
+		}
+		.a-k{
+			color: #fff;
+			background-color: #000000;
+			font-family: Arial;
+			font-size: 25px;
+		}
+	</style>
+    <style class="temp">
+      	.temp{
+        	margin:0;
+        	padding: 0;
+        	text-align: right;
+			position: fixed;
+    		z-index:9999999;
+    		bottom: 0;
+        	width: auto;
+        	right: 1%;
+        	cursor: pointer;
+        	line-height: 0;
+        	display:block !important;
+      		}
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="https://naveta-code.github.io/ngobar.html"><img class="nav-brand" src="https://naveta-code.github.io/templ.png"></a></li>
+        <li><a href="https://github.com/naveta-code">Author</a></li>
+      </ul>
+	</nav>
+	<div class="content">
+			<pre class="isi">
+		Validasi sangat penting dalam website karena dapat dijadikan sebagai form login.
+	Berikut contohnya:
+			</pre>
+			<div class="code-container">
+				<pre class="code">
+&lt!DOCTYPE html&gt
+	&lthead&gt
+		&lttitle&gtValidasi&lt/title&gt
+		&ltmeta charset="utf-8"&gt
+		&ltmeta http-equiv="x-ua-compatible" content="ie=edge"&gt
+		&ltmeta name="viewport" content="width=device-width,initial-scale=1"&gt
+	&lt/head&gt
+	&ltbody&gt
+	    &ltform action=""&gt
+			&ltinput type="email" placeholder="Username" id="username" require&gt
+			&ltinput type="password" placeholder="Password" id="password" require&gt
+			&ltinput type="submit" onclick="masuk();"&gt
+	    &lt/form&gt
+		&ltscript&gt
+			var user = document.getElemntById("username").value;
+			var pass = document.getElementById("password").value;
+		function masuk(){
+			//ini username terdaftar
+			if(user === "Si-Bos"){
+			//ini password terdaftar
+				if(pass === "root"){
+					alert ("Selamat Datang Bos!")
+				}
+			}else{
+				alert ("Maaf Username atau Password tidak dikenal,coba lagi")
+			}
+		}
+	    &lt/script&gt
+	&lt/body&gt
+&lt/html&gt
+				</pre>
+			</div>
+	</div>
+	<div class="content">
+		<pre class="isi">
+	Itu contoh dengan akun terdaftar hanya satu,bagaimana denagan dua akun atau lebih?
+Jawabannya tentu bisa.Tetapi dengan percabangan if/else/if.Berikut contohnya:
+		</pre>
+		<div class="code-container">
+			<pre class="code">
+&lt!DOCTYPE html&gt
+&lthead&gt
+	&lttitle&gtValidasi&lt/title&gt
+	&ltmeta charset="utf-8"&gt
+	&ltmeta http-equiv="x-ua-compatible" content="ie=edge"&gt
+	&ltmeta name="viewport" content="width=device-width,initial-scale=1"&gt
+&lt/head&gt
+&ltbody&gt
+	&ltform action=""&gt
+		&ltinput type="email" placeholder="Username" id="username" require&gt
+		&ltinput type="password" placeholder="Password" id="password" require&gt
+		&ltinput type="submit" onclick="masuk();"&gt
+	&lt/form&gt
+	&ltscript&gt
+		var user = document.getElemntById("username").value;
+		var pass = document.getElementById("password").value;
+	function masuk(){
+		//ini username terdaftar 1
+		if(user === "Si-Bos"){
+		//ini password terdaftar 1
+			if(pass === "root"){
+				alert ("Login Berhasil")
+			}
+		//ini username terdaftar 2
+		else if(user === "kopi"){
+		//ini password terdaftar 2
+			else if(pass === "12345"){
+				alert ("Login Berhasil")
+			}
+		}
+		}else{
+			alert ("Maaf Username atau Password tidak dikenal,coba lagi")
+		}
+	}
+	&lt/script&gt
+&lt/body&gt
+&lt/html&gt
+			</pre>
+		</div>
+	</div>
+	<div class="a-k">
+		<h1>Sekian Dari Saya,Oh iya Jangan copas ini hanya contoh ya... xD</h1>
+	</div>
+		<!-- TEMPLATE -->
+		<div class="temp">
+        <a title="Making Any Website" target="_blank" href="https://github.com/naveta-code">
+	      <img style="background-color: #fff;opacity:50%;" src="https://naveta-code.github.io/templ.png" alt="naveta-code.github.io">
+	</a>
+</div>
+
+</body></html>
