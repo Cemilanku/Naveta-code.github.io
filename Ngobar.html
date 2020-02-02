@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=ege">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
-      			      *{
-     			 	margin:0;
-      				padding:0;
-      				}
-			      body {
-			  	background-image: linear-gradient(120deg,#3498db,#8e44ad);
+      *{
+     		margin:0;
+      	padding:0;
+      		  }
+			body {
+			  background-image: linear-gradient(120deg,#3498db,#8e44ad);
 				height: 100vh;
 				background-repeat: no-repeat;
 				height: 100vh;
@@ -18,7 +18,7 @@
 				background-position: center;
 				font-family: Gill Sans MT;
 			    }
-			 nav {
+			nav {
 				background-color: #ffffff;
 						}
 			nav ul {
@@ -29,7 +29,7 @@
 						}
 			nav > ul > li {
 				float: left;
-					}
+					  }
 			nav li a {
 				display: inline-block;
 				color: black;
@@ -39,13 +39,56 @@
 				padding: 14px 16px;
 				text-decoration: none;
 						}
-					nav li a:hover{
-							background-color: grey;
+			nav li a:hover{
+				background-color: grey;
 						}
-					.nav-brand{
-						height:30px;
-						width: 120px;
-					}
+		  .nav-brand{
+				height:30px;
+				width: 120px;
+					  }
+      .row{
+        background-color: rgba(255, 255, 255, 0.178);
+				height: auto;
+				width: auto;
+            }
+      .card-p{
+				height: 160px;
+				width: 115px;
+				float: left;
+				margin-left: 45px;
+				margin-top: 20px;
+				background-color: #fff;
+				border-radius: 5%;
+			}
+			.card-p a{
+				text-decoration:none
+			}
+			.card-p a p{
+				font-family: fantasy;
+				color: #000;
+				text-align: center;
+				font-size: 20px;
+			}
+			.c-p{
+				height: 105px;
+				width: 115px;
+				text-align: center;
+				border-radius: 5%;
+			}
+    </style>
+    <style class="temp">
+      .temp{
+        margin:0;
+        padding: 0;
+        text-align: right;position: fixed;
+        z-index:9999999;
+        bottom: 0;
+        width: auto;
+        right: 1%;
+        cursor: pointer;
+        line-height: 0;
+        display:block !important;
+      }
     </style>
   </head>
   <body>
@@ -55,10 +98,16 @@
         <li><a href="https://github.com/naveta-code">Author</a></li>
       </ul>
     </nav>
+    <div class="row">
+      <div class="card-size">
+        <div class="card-p"><a href=""><img class="c-p" src="https://naveta-code.github.io/temp.jpg" alt="Validasi"><div class="d-p"><p>Javascript Validasi</p></div></a></div>
+      </div>
+    </div>
 		<!-- TEMPLATE -->
-		<div style="margin:0;padding: 0;text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;">
+		<div class="temp">
         <a title="Making Any Website" target="_blank" href="https://github.com/naveta-code">
 	      <img style="background-color: #fff;opacity:50%;" src="https://naveta-code.github.io/templ.png" alt="naveta-code.github.io">
 	</a>
 </div>
+
 </body></html>
