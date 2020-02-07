@@ -1,0 +1,78 @@
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Count Math | Lingkaran</title>
+  <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+  <style>
+  body {
+    background-color: yellow;
+    background-size: auto;
+  }
+    .lnk {
+      height: 100%;
+      text-align: center;
+      margin-left: 80px;
+    }
+    .lnk input[type=number] {
+      color: black;
+      font-style: normal;
+      font-family: sans-serif;
+      text-align: center;
+      text-decoration: none;
+      padding: 5 5px;
+    }
+    button {
+      width: 70px;
+      height: 50px;
+      float: left;
+      border: 3px solid #000;
+      background-color: transparent;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+    }
+    button:hover {
+      background-color: #fff;
+    }
+  </style>
+ </head>
+<body>
+  <button type="button" onclick="history.back();"><h3>Back</h3></button>
+  <form class="lnk">
+<h3>Mencari Keliling Lingkaran</h3>
+<input type="number" id="txt1" placeholder="Diameter lingkaran" onkeyup="lnk();"><h3>=</h3>
+<input type="number" id="txt2" placeholder="Keliling">
+<h3>Mencari Diameter Lingkaran</h3>
+<input type="number" id="txt3" placeholder="Keliling" onkeyup="lnk1();"><h3>=</h3>
+<input type="number" id="txt4" placeholder="Diameter lingkaran">
+<input type="reset" value="Reset!">
+</div>
+    <script>
+      function lnk() {
+        var a = 3.142857143;
+        var b = document.getElementById('txt1').value;
+        var result = parseInt(a) * parseInt(b);
+        var result = parseFloat(a) * parseFloat(b);
+        var result1 = Math.round(result)
+        if (!isNaN(result1)) {
+           document.getElementById('txt2').value = result1;
+        }
+  };
+  </script>
+  <script>
+    function lnk1() {
+      var a = 3.142857143;
+      var b = document.getElementById('txt3').value;
+      var result = parseInt(b) / parseInt(a);
+      var result = parseFloat(b) / parseFloat(a);
+      var result1 = Math.round(result)
+      if (!isNaN(result1)) {
+         document.getElementById('txt4').value = result1;
+      }
+};
+</script>
+
+</body>
+</html>

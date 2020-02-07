@@ -1,0 +1,75 @@
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Count Math | Belah ketupat</title>
+  <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+  <style>
+    body {
+      background-color: yellow;
+      background-size: auto;
+    }
+    .blk {
+      height: 100%;
+      text-align: center;
+      margin-left: 80px;
+    }
+    .blk input[type=number] {
+      color: black;
+      font-style: normal;
+      font-family: sans-serif;
+      text-align: center;
+      text-decoration: none;
+      padding: 5 5px;
+    }
+    button {
+      width: 70px;
+      height: 50px;
+      float: left;
+      border: 3px solid #000;
+      background-color: transparent;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+    }
+    button:hover {
+      background-color: #fff;
+    }
+  </style>
+ </head>
+<body>
+  <button type="button" onclick="history.back();"><h3>Back</h3></button>
+  <form class="blk">
+<h3>Menghitung Keliling Belah ketupat</h3>
+<input type="number" id="txt1" placeholder="Sisi" onkeyup="blk();"><h3>=</h3>
+<input type="number" id="txt2" placeholder="Keliling">
+<h3>Menghitung Sisi Belah ketupat</h3>
+<input type="number" id="txt3" placeholder="Keliling" onkeyup="blk1();"><h3>=</h3>
+<input type="number" id="txt4" placeholder="Sisi">
+  </form>
+  <script>
+    function blk() {
+      var a = 4;
+      var b = document.getElementById('txt1').value;
+      var result = parseInt(a) * parseInt(b);
+      var result = parseFloat(a) * parseFloat(b);
+      if (!isNaN(result)) {
+         document.getElementById('txt2').value = result;
+      }
+    };
+  </script>
+  <script>
+    function blk1() {
+      var a = 4;
+      var b = document.getElementById('txt3').value;
+      var result = parseInt(b) / parseInt(a);
+      var result = parseFloat(b) / parseFloat(a);
+      if (!isNaN(result)) {
+         document.getElementById('txt4').value = result;
+      }
+    };
+  </script>
+
+</body>
+</html>

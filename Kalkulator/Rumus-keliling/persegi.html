@@ -1,0 +1,79 @@
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Count Math | Persegi</title>
+  <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+  <style>
+    body {
+    background-color: yellow;
+    background-size: auto;
+  }
+    .psg {
+      height: 100%;
+      text-align: center;
+      margin-left: 80px;
+    }
+    .psg input[type=number] {
+      color: black;
+      font-style: normal;
+      font-family: sans-serif;
+      text-align: center;
+      text-decoration: none;
+      padding: 5 5px;
+    }
+    button {
+      width: 70px;
+      height: 50px;
+      float: left;
+      border: 3px solid #000;
+      background-color: transparent;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+    }
+    a {
+      color: #000;
+    }
+    button:hover {
+      background-color: #fff;
+    }
+  </style>
+ </head>
+<body>
+  <button type="button" onclick="history.back();"><h3>Back</h3></button>
+  <form class="psg">
+<h3>Menghitung Keliling Persegi</h3>
+<input type="number" id="txt1" placeholder="Sisi" onkeyup="psg();"><h3>=</h3>
+<input type="number" id="txt2" placeholder="Keliling" onkeyup="psg();">
+<h3>Menghitung Sisi Persegi</h3>
+<input type="number" id="txt3" placeholder="Keliling" onkeyup="psg1();"><h3>=</h3>
+<input type="number" id="txt4" placeholder="Sisi" onkeyup="psg1();">
+<input type="reset" value="Reset!">
+</form>
+  <script>
+    function psg() {
+      var a = 4;
+      var b = document.getElementById('txt1').value;
+      var result = parseInt(a) * parseInt(b);
+      var result = parseFloat(a) * parseFloat(b);
+      if (!isNaN(result)) {
+         document.getElementById('txt2').value = result;
+      }
+    };
+  </script>
+  <script>
+    function psg1(){
+      var c = document.getElementById('txt3').value;
+      var d = 4;
+      var result1 = parseInt(c) / parseInt(d);
+      var result1 = parseFloat(c) / parseFloat(d);
+      if (!isNaN(result1)) {
+         document.getElementById('txt4').value = result1;
+      }
+    };
+</script>
+
+</body>
+</html>

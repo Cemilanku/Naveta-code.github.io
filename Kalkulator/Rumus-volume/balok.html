@@ -1,0 +1,122 @@
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Count Math | Balok</title>
+  <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+  <style>
+    body {
+    background-color: yellow;
+    background-size: auto;
+  }
+    .blk {
+      height: 100%;
+      text-align: center;
+      margin-left: 80px;
+    }
+    .blk input[type=number] {
+      color: black;
+      font-style: normal;
+      font-family: sans-serif;
+      text-align: center;
+      text-decoration: none;
+      padding: 5 5px;
+    }
+    button {
+      width: 70px;
+      height: 50px;
+      float: left;
+      border: 3px solid #000;
+      background-color: transparent;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+    }
+    a {
+      color: #000;
+    }
+    button:hover {
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" onclick="history.back();"><h3>Back</h3></button>
+  <form class="blk">
+<h3>Menghitung Volume Balok</h3>
+<input type="number" id="txt1" placeholder="Panjang" onkeyup="blk();">
+<input type="number" id="txt2" placeholder="Lebar" onkeyup="blk();">
+<input type="number" id="txt3" placeholder="Tinggi" onkeyup="blk();"><h3>=</h3>
+<input type="number" id="txt4" placeholder="Volume">
+<h3>Menghitung Panjang Balok</h3>
+<input type="number" id="txt5" placeholder="Volume" onkeyup="blk1();">
+<input type="number" id="txt6" placeholder="Lebar" onkeyup="blk1();">
+<input type="number" id="txt7" placeholder="Tinggi" onkeyup="blk1();"><h3>=</h3>
+<input type="number" id="txt8" placeholder="Panjang">
+<h3>Menghitung Lebar Balok</h3>
+<input type="number" id="txt9" placeholder="Volume" onkeyup="blk2();">
+<input type="number" id="txt0" placeholder="Panjang" onkeyup="blk2();">
+<input type="number" id="txtq" placeholder="Tinggi" onkeyup="blk2();"><h3>=</h3>
+<input type="number" id="txtw" placeholder="Lebar">
+<h3>Menghitung Tinggi Balok</h3>
+<input type="number" id="txte" placeholder="Volume" onkeyup="blk3();">
+<input type="number" id="txtr" placeholder="Panjang" onkeyup="blk3();">
+<input type="number" id="txtt" placeholder="Lebar" onkeyup="blk3();"><h3>=</h3>
+<input type="number" id="txty" placeholder="Tinggi">
+<input type="reset" value="Reset!">
+  </form>
+  <br>
+  <br>
+  <br>
+  <script>
+    function blk() {
+      var a = document.getElementById('txt1').value;
+      var b = document.getElementById('txt2').value;
+      var c = document.getElementById('txt3').value;
+      var result = parseInt(a) * parseInt(b) * parseInt(c);
+      var result = parseFloat(a) * parseFloat(b) * parseFloat(c);
+      if (!isNaN(result)) {
+         document.getElementById('txt4').value = result;
+      }
+    };
+  </script>
+  <script>
+    function blk1() {
+      var a = document.getElementById('txt5').value;
+      var b = document.getElementById('txt6').value;
+      var c = document.getElementById('txt7').value;
+      var result = parseInt(a) / parseInt(b) / parseInt(c);
+      var result = parseFloat(a) / parseFloat(b) / parseFloat(c);
+      if (!isNaN(result)) {
+         document.getElementById('txt8').value = result;
+      }
+    };
+  </script>
+  <script>
+    function blk2() {
+      var a = document.getElementById('txt9').value;
+      var b = document.getElementById('txt0').value;
+      var c = document.getElementById('txtq').value;
+      var result = parseInt(a) / parseInt(b) / parseInt(c);
+      var result = parseFloat(a) / parseFloat(b) / parseFloat(c);
+      if (!isNaN(result)) {
+         document.getElementById('txtw').value = result;
+      }
+    };
+  </script>
+  <script>
+    function blk3() {
+      var a = document.getElementById('txte').value;
+      var b = document.getElementById('txtr').value;
+      var c = document.getElementById('txtt').value;
+      var result = parseInt(a) / parseInt(b) / parseInt(c);
+      var result = parseFloat(a) / parseFloat(b) / parseFloat(c);
+      if (!isNaN(result)) {
+         document.getElementById('txty').value = result;
+      }
+    };
+  </script>
+
+</body>
+</html>

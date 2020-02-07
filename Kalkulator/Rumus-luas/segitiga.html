@@ -1,0 +1,100 @@
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Count Math | Segitiga</title>
+  <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+  <style>
+  body {
+    background-color: yellow;
+    background-size: auto;
+  }
+    .stg {
+      height: 100%;
+      text-align: center;
+      margin-left: 80px;
+    }
+    .stg input[type=number] {
+      color: black;
+      font-style: normal;
+      font-family: sans-serif;
+      text-align: center;
+      text-decoration: none;
+      padding: 5 5px;
+    }
+button {
+  width: 70px;
+  height: 50px;
+  float: left;
+  border: 3px solid #000;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+a {
+  color: #000;
+}
+button:hover {
+  background-color: #fff;
+}
+  </style>
+ </head>
+<body>
+  <button type="button" onclick="history.back();"><h3>Back</h3></button>
+  <form class="stg">
+<h2>Menghitung Luas Segitiga</h2>
+<input type="number" id="txt1" placeholder="Alas" onkeyup="stg();">
+<input type="number" id="txt2" placeholder="Tinggi" onkeyup="stg();"><h3>=</h3>
+<input type="number" id="txt3" placeholder="Luas">
+<h2>Menghitung Tinggi Segitiga</h2>
+<input type="number" id="txt4" placeholder="Luas" onkeyup="tng();">
+<input type="number" id="txt5" placeholder="Alas" onkeyup="tng();"><h3>=</h3>
+<input type="number" id="txt6" placeholder="Tinggi">
+<h2>Menghitung Alas Segitiga</h2>
+<input type="number" id="txt7" placeholder="Luas" onkeyup="als();">
+<input type="number" id="txt8" placeholder="Tinggi" onkeyup="als();"><h3>=</h3>
+<input type="number" id="txt9" placeholder="Alas">
+<input type="reset" value="Reset!">
+  </form>
+  <script>
+  function stg() {
+    var a = 0.5;
+    var b = document.getElementById("txt1").value;
+    var c = document.getElementById("txt2").value;
+    var z = parseInt(a) * parseInt(b) * parseInt(c);
+    var z = parseFloat(a) * parseFloat(b) * parseFloat(c);
+    if (!isNaN(z)) {
+       document.getElementById("txt3").value = z;
+    }
+  };
+  </script>
+  <script>
+  function tng() {
+    var d = document.getElementById("txt4").value;
+    var e = 2;
+    var f = document.getElementById("txt5").value;
+    var z1 = parseInt(d) * parseInt(e) / parseInt(f);
+    var z1 = parseFloat(d) * parseFloat(e) / parseFloat(f);
+    if (!isNaN(z1)) {
+       document.getElementById("txt6").value = z1;
+        }
+    };
+  </script>
+  <script>
+  function als(){
+    var g = document.getElementById("txt7").value;
+    var h = 2;
+    var i = document.getElementById("txt8").value;
+    var z2 = parseInt(g) * parseInt(h) / parseInt(i);
+    var z2 = parseFloat(g) * parseFloat(h) / parseFloat(i);
+    if (!isNaN(z2)) {
+       document.getElementById("txt9").value = z2;
+     }
+  };
+  </script>
+
+
+  </body>
+  </html>

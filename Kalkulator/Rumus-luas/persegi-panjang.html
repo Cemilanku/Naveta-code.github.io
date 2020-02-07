@@ -1,0 +1,96 @@
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Count Math | Persegi</title>
+  <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+  <style>
+  body {
+    background-color: yellow;
+    background-size: auto;
+  }
+    .psg {
+      height: 100%;
+      text-align: center;
+      margin-left: 80px;
+    }
+    .psg input[type=number] {
+      color: black;
+      font-style: normal;
+      font-family: sans-serif;
+      text-align: center;
+      text-decoration: none;
+      padding: 5 5px;
+    }
+    button {
+      width: 70px;
+      height: 50px;
+      float: left;
+      border: 3px solid #000;
+      background-color: transparent;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+    }
+    a {
+      color: #000;
+    }
+    button:hover {
+      background-color: #fff;
+    }
+  </style>
+ </head>
+<body>
+  <button type="button" onclick="history.back();"><h3>Back</h3></button>
+  <form class="psg">
+<h3>Menghitung Luas Persegi Panjang</h3>
+<input type="number" id="txt1" placeholder="Panjang" onkeyup="psg();">
+<input type="number" id="txt2" placeholder="Lebar" onkeyup="psg();"><h3>=</h3>
+<input type="number" id="txt3" placeholder="Luas">
+<h3>Menghitung Panjang Persegi Panjang</h3>
+<input type="number" id="txt4" placeholder="Luas" onkeyup="pjg();">
+<input type="number" id="txt5" placeholder="Lebar" onkeyup="pjg();"><h3>=</h3>
+<input type="number" id="txt6" placeholder="Panjang">
+<h3>Menghitung Lebar Persegi Panjang</h3>
+<input type="number" id="txt7" placeholder="Panjang" onkeyup="klg();">
+<input type="number" id="txt8" placeholder="Lebar" onkeyup="klg();"><h3>=</h3>
+<input type="number" id="txt9" placeholder="Hasil">
+<input type="reset" value="Reset!">
+</form>
+  <script>
+    function psg() {
+      var a = document.getElementById('txt1').value;
+      var b = document.getElementById('txt2').value;
+      var result = parseInt(a) * parseInt(b);
+      var result = parseFloat(a) * parseFloat(b);
+      if (!isNaN(result)) {
+         document.getElementById('txt3').value = result;
+      }
+    };
+    </script>
+    <script>
+    function pjg(){
+      var c = document.getElementById('txt4').value;
+      var d = document.getElementById('txt5').value;
+      var y1 = parseInt(c) / parseInt(d);
+      var y1 = parseFloat(c) / parseFloat(d);
+      if (!isNaN(y1)) {
+         document.getElementById('txt6').value = y1;
+      }
+    };
+    </script>
+    <script>
+    function klg(){
+      var e = document.getElementById('txt7').value;
+      var f = document.getElementById('txt8').value;
+      var z2 = parseInt(e) / parseInt(f);
+      var z2 = parseFloat(e) / parseFloat(f);
+      if (!isNaN(z2)) {
+         document.getElementById('txt9').value = z2;
+      }
+}
+</script>
+
+</body>
+</html>
