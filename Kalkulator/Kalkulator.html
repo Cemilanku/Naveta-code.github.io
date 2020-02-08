@@ -1,77 +1,135 @@
-<html><head>
+<html>
+<head>
     <meta charset="UTF-8">
     <title>Auto Count Math</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-	body {
-    	background-color: yellow;
-    	background-size: 100%;
+	* {
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
 	}
-	.post {
+	html, body {
+	  	overflow-y: hidden;
+	  	background-color: yellow;
+    	background-size: 100%;
+      	overflow-x: hidden;
+    }
+	#container {
+    	padding-left: 0;
+    	-webkit-transition: all 0.5s ease;
+    	-moz-transition: all 0.5s ease;
+    	-o-transition: all 0.5s ease;
+    	transition: all 0.5s ease;
+	}
+
+	#container.toggled {
+    	padding-left: 250px;
+	}
+
+	#sidebar {
+    	z-index: 1000;
+    	position: fixed;
+    	left: 250px;
+    	width: 0;
     	height: 100%;
+    	margin-left: -250px;
+		margin-top: -52px;
+		overflow-x: hidden;
+	  	overflow-y: scroll;
+    	background: #2c3e50;
+    	-webkit-transition: all 0.5s ease;
+    	-moz-transition: all 0.5s ease;
+    	-o-transition: all 0.5s ease;
+    	transition: all 0.5s ease;
+
+	}
+
+	#container.toggled #sidebar {
+    	width: 250px;
+	}
+
+	#page-content-container {
     	width: 100%;
+    	position: absolute;
+    	padding: 15px;
+	}
+
+	#container.toggled #page-content-container {
+    	position: absolute;
+    	margin-right: -250px;
+	}
+
+	.sidebar-nav {
+    	position: absolute;
+    	top: 0;
+    	width: 250px;
+    	margin: 0;
+    	padding: 0;
+    	list-style: none;
+	}
+
+	.sidebar-nav li {
+    	text-indent: 20px;
+    	line-height: 40px;
+	}
+
+	.sidebar-nav li a {
+    	display: block;
+    	text-decoration: none;
+    	color: #d35400;
+    	font-weight: bold;
+	}
+	.sidebar-nav li h2 {
+    	display: block;
+    	text-decoration: none;
+    	color: #d35400;
+    	font-weight: bold;
+	}
+
+	.sidebar-nav li a:hover {
+    	text-decoration: none;
+    	color: #fff;
+    	font-weight: bold;
+    	background: #d35400;
+	}
+
+	.sidebar-nav li a:active,
+	.sidebar-nav li a:focus {
+    	text-decoration: none;
+	}
+
+	.sidebar-nav > .sidebar-brand {
+    	height: 65px;
+    	font-size: 18px;
+    	line-height: 60px;
+	}
+	.sidebar-nav > .sidebar-brand a:hover {
+    	color: #fff;
+    	background: none;
+    	font-weight: bold;
 	}
 	.logo {
-  		height:30px;
-
+  		height:100px;
+		width: 100px;
 	}
-	.nav {
-		background-color: #3141ff;
+	#scroll-hide{
+  		width:100px;
+  		overflow:hidden;
+  		background:#000;
 	}
-	.nav ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
+	#scroll-hide .inner{
+  		width:80px;
+  		height:200px;
+  		overflow:auto;
+  		margin:20px;
+  		padding-right:20px;
+  		background:#404040;
 	}
-
-	.nav > ul > li {
-		float: left;
-	}
-
-
-	.nav li a {
-		display: inline-block;
-		color: white;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-		transition: 0.35s;
-		font-size: 15px;
-	}
-
-	.nav li a:hover{
-		background-color: #2525ff;
-	}
-
-	li.dropdown {
-		display: inline-block;
-	}
-
-	.dropdown:hover .isi-dropdown {
-		display: block;
-	}
-	.isi-dropdown {
-		position: absolute;
-		display: none;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-		background-color: #f9f9f9;
-	}
-
-	.isi-dropdown a {
-		color: #3c3c3c !important;
-	}
-
-	.isi-dropdown a:hover {
-		color: #232323 !important;
-		background: #f3f3f3 !important;
+	.header{
+		margin-left: 17.5%;
+		width: auto;
 	}
 	marquee{
 		text-align: left;
@@ -83,51 +141,118 @@
 		margin-top: 150px;
 		text-align: center;
 	}
+	.menu{
+		width: 64px;
+		height: 52px;
+	}
+
+@media(min-width:768px) {
+	.logo {
+  		height:100px;
+		width: 100px;
+	}
+    #container {
+        padding-left: 250px;
+    }
+
+    #container.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar {
+        width: 250px;
+		margin-top: -52px;
+    }
+
+    #container.toggled #sidebar {
+        width: 0;
+    }
+
+    #page-content-container {
+        padding: 20px;
+        position: relative;
+    }
+
+    #container.toggled #page-content-container {
+        position: relative;
+        margin-right: 0;
+    }
+}
 </style>
 </head>
 <body>
-
+	
 <!-- #DROPDOWN NAV -->
-	<div class="nav">
-		<ul>
-			<li><a href=""><img class="logo" src="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png"></a></li>
-      <li class="dropdown"><a>Rumus Luas</a>
-				<ul class="isi-dropdown">
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/persegi-panjang.html">Persegi panjang</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/persegi.html">Persegi</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/segitiga.html">Segitiga</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/belah-ketupat.html">Belah ketupat</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/lingkaran.html">Lingkaran</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/layang-layang.html">Layang-layang</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/jajar-genjang.html">Jajar genjang</a></li>
-				</ul>
-			</li>
-      <li class="dropdown"><a>Rumus Keliling</a>
-				<ul class="isi-dropdown">
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/persegi-panjang.html">Persegi panjang</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/persegi.html">Persegi</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/belah-ketupat.html">Belah ketupat</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/lingkaran.html">Lingkaran</a></li>
-				</ul>
-			</li>
-      <li class="dropdown"><a>Rumus Volume</a>
-				<ul class="isi-dropdown">
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/kubus.html">Kubus</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/balok.html">Balok</a></li>
-          <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/tabung.html">Tabung</a></li>
-				</ul>
-			</li>
+<div id="container">
+	<div>
+		<a href="#menu" class="btn btn-default" id="menu"><img class="menu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"></a>
+	</div>
+	<div id="sidebar">
+		<ul class="sidebar-nav">
+			<div>
+				<li><h1>
+					<img class="logo"src="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+				</h1></li>
+	</div>
+		 <div>
+		  <li><h2>Rumus Luas</h2>
+					<ul>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/persegi-panjang.html">Persegi panjang</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/persegi.html">Persegi</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/segitiga.html">Segitiga</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/belah-ketupat.html">Belah ketupat</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/lingkaran.html">Lingkaran</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/layang-layang.html">Layang-layang</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/jajar-genjang.html">Jajar genjang</a></li>
+					</ul>
+				</li>
+		 </div> 
+		 <div>
+		  <li><h2>Rumus Keliling</h2>
+					<ul>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/persegi-panjang.html">Persegi panjang</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/persegi.html">Persegi</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/belah-ketupat.html">Belah ketupat</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/lingkaran.html">Lingkaran</a></li>
+					</ul>
+				</li>
+		 </div>
+		 <div>
+		  <li><h2>Rumus Volume</h2>
+					<ul>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/kubus.html">Kubus</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/balok.html">Balok</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/tabung.html">Tabung</a></li>
+					</ul>
+				</li>
+		 </div>
 		</ul>
 	</div>
-
-
-	<!-- #SCRIPT COLOUMN -->
-<marquee><h2>Selamat Datang di Auto Count Math</h2></marquee>
-<div class="warn">
-<h3>WARNING!</h3>
-<h4>Apabila hasil dari penghitungan berhasilkan bilangan desimal anda dapat membulatkannya sendiri.</h4>
-</div>
-        
-    
-
-</body></html>
+	<div id="page-content-container">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="header">
+					<marquee>
+						<h2>Selamat Datang di Auto Count Math</h2>
+					</marquee>
+					<div class="warn">
+						<h3>WARNING!</h3>
+						<h4>Apabila hasil dari penghitungan berhasilkan bilangan desimal anda dapat membulatkannya sendiri.</h4>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#menu").click(function(e) {
+          e.preventDefault();
+        $("#container").toggleClass("toggled");
+        });
+    });
+</script>
+    </body>
+</html>
