@@ -1,0 +1,243 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Count Math</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+<style>
+	* {
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+	}
+	html, body {
+	  	overflow-y: hidden;
+	  	background-color: yellow;
+    	background-size: 100%;
+		max-width: auto;
+		max-height: auto;
+    	overflow-x: unset;
+		position: fixed;
+    }
+	#container {
+    	padding-left: 0;
+    	-webkit-transition: all 0.5s ease;
+    	-moz-transition: all 0.5s ease;
+    	-o-transition: all 0.5s ease;
+    	transition: all 0.5s ease;
+	}
+
+	#container.toggled {
+    	padding-left: 250px;
+	}
+
+	#sidebar {
+    	z-index: 1000;
+    	position: fixed;
+    	left: 250px;
+    	width: 0;
+    	height: 100%;
+    	margin-left: -250px;
+		margin-top: -52px;
+		overflow-x: hidden;
+	  	overflow-y: scroll;
+    	background: rgb(14, 73, 236);
+    	-webkit-transition: all 0.5s ease;
+    	-moz-transition: all 0.5s ease;
+    	-o-transition: all 0.5s ease;
+    	transition: all 0.5s ease;
+
+	}
+
+	#container.toggled #sidebar {
+    	width: 250px;
+	}
+
+	#page-content-container {
+    	width: 100%;
+    	position: fixed;
+    	padding: 15px;
+		text-align: center;
+	}
+
+	#container.toggled #page-content-container {
+    	position: absolute;
+    	margin-right: -250px;
+		text-align: center;
+	}
+
+	.sidebar-nav {
+    	position: absolute;
+    	top: 0;
+    	width: 250px;
+    	margin: 0;
+    	padding: 0;
+    	list-style: none;
+	}
+
+	.sidebar-nav li {
+    	text-indent: 20px;
+    	line-height: 40px;
+	}
+
+	.sidebar-nav li a {
+    	display: block;
+    	text-decoration: none;
+    	color: #ffffff;
+    	font-weight: bold;
+	}
+	.sidebar-nav li h2 {
+    	display: block;
+    	text-decoration: none;
+    	color: #ffffff;
+    	font-weight: bold;
+	}
+
+	.sidebar-nav li a:hover {
+    	text-decoration: none;
+    	color: #fff;
+    	font-weight: bold;
+    	background: #d35400;
+	}
+
+	.sidebar-nav li a:active,
+	.sidebar-nav li a:focus {
+    	text-decoration: none;
+	}
+	.logo {
+  		height:100px;
+		width: 100px;
+	}
+	.header{
+		width: 100%;
+		text-align: center;
+	}
+	.header h2{
+		font-size: 30px;
+	}
+	.warn{
+		margin-top: 150px;
+	}
+	.menu{
+		width: 64px;
+		height: 52px;
+	}
+
+@media(min-width:768px) {
+	html, body {
+	  	overflow-y: hidden;
+	  	background-color: yellow;
+    	background-size: 100%;
+		max-width: 100%;
+    	overflow-x: unset;
+    }
+	.logo {
+  		height:100px;
+		width: 100px;
+	}
+    #container {
+        padding-left: 250px;
+    }
+
+    #container.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar {
+        width: 250px;
+		margin-top: -52px;
+    }
+
+    #container.toggled #sidebar {
+        width: 0;
+    }
+
+    #page-content-container {
+        padding: 20px;
+        position: relative;
+    }
+
+    #container.toggled #page-content-container {
+        position: relative;
+        margin-right: 0;
+    }
+	
+}
+</style>
+</head>
+<body>
+	
+<!-- #DROPDOWN NAV -->
+<div id="container">
+	<div>
+		<a href="#menu" class="btn btn-default" id="menu"><img class="menu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"></a>
+	</div>
+	<div id="sidebar">
+		<ul class="sidebar-nav">
+			<div>
+				<li><h1>
+					<img class="logo"src="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+				</h1></li>
+	</div>
+		 <div>
+		  <li><h2>Rumus Luas</h2>
+					<ul>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/persegi-panjang.html">Persegi panjang</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/persegi.html">Persegi</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/segitiga.html">Segitiga</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/belah-ketupat.html">Belah ketupat</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/lingkaran.html">Lingkaran</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/layang-layang.html">Layang-layang</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-luas/jajar-genjang.html">Jajar genjang</a></li>
+					</ul>
+				</li>
+		 </div> 
+		 <div>
+		  <li><h2>Rumus Keliling</h2>
+					<ul>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/persegi-panjang.html">Persegi panjang</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/persegi.html">Persegi</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/belah-ketupat.html">Belah ketupat</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-keliling/lingkaran.html">Lingkaran</a></li>
+					</ul>
+				</li>
+		 </div>
+		 <div>
+		  <li><h2>Rumus Volume</h2>
+					<ul>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/kubus.html">Kubus</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/balok.html">Balok</a></li>
+			  <li><a href="https://naveta-code.github.io/Kalkulator/Rumus-volume/tabung.html">Tabung</a></li>
+					</ul>
+				</li>
+		 </div>
+		</ul>
+	</div>
+	<div id="page-content-container">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="header">
+					<marquee>
+						<h2>Selamat Datang di Auto Count Math</h2>
+					</marquee>
+					<div class="warn">
+						<h3>WARNING!</h3>
+						<h4>Apabila hasil dari penghitungan berhasilkan bilangan desimal anda dapat membulatkannya sendiri.</h4>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#menu").click(function(e) {
+          e.preventDefault();
+        $("#container").toggleClass("toggled");
+        });
+    });
+</script>
+    </body>
+</html>

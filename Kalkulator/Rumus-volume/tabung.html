@@ -1,0 +1,102 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Count Math | Tabung</title>
+  <link rel="shortcut icon" href="https://purepng.com/public/uploads/large/purepng.com-calculator-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596017qe0p7.png">
+  <style>
+    body {
+    background-color: yellow;
+    background-size: auto;
+  }
+    .blk {
+      height: 100%;
+      text-align: center;
+      margin-left: 80px;
+    }
+    .blk input[type=number] {
+      color: black;
+      font-style: normal;
+      font-family: sans-serif;
+      text-align: center;
+      text-decoration: none;
+      padding: 5 5px;
+    }
+    button {
+      width: 70px;
+      height: 50px;
+      float: left;
+      border: 3px solid #000;
+      background-color: transparent;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+    }
+    a {
+      color: #000;
+    }
+    button:hover {
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+<form class="blk">
+<h3>Menentukan Volume Tabung</h3>
+<input type="number" id="txt1" placeholder="Jari-jari" onkeyup="kbs();">
+<input type="number" id="txt2" placeholder="Tinggi" onkeyup="kbs();"><h3>=</h3>
+<input type="number" id="txt3" placeholder="Volume">
+<h3>Menentukan Jari-jari Tabung</h3>
+<input type="number" id="txt4" placeholder="Volume" onkeyup="kbs1();">
+<input type="number" id="txt5" placeholder="Tinggi" onkeyup="kbs1();"><h3>=</h3>
+<input type="number" id="txt6" placeholder="Jari-jari">
+<h3>Menentukan Tinggi Tabung</h3>
+<input type="number" id="txt7" placeholder="Volume" onkeyup="kbs2();">
+<input type="number" id="txt8" placeholder="Jari-jari" onkeyup="kbs2();"><h3>=</h3>
+<input type="number" id="txt9" placeholder="Tinggi">
+<input type="reset" value="Reset!">
+</form>
+  <script>
+    function kbs() {
+      var a = document.getElementById('txt1').value;
+      var b = document.getElementById('txt2').value;
+      var result = 3.142857143 * parseInt(a) ** 2 * parseInt(b);
+      var result = 3.142857143 * parseFloat(a) ** 2 * parseFloat(b);
+      if (!isNaN(result)) {
+        document.getElementById('txt3').value = result;
+      }
+    };
+  </script>
+  <script>
+    function kbs1() {
+      var a = document.getElementById('txt4').value;
+      var b = document.getElementById('txt5').value;
+      var c = 3.142857143
+      var result = 3.142857143 * parseInt(b);
+      var result = 3.142857143 * parseFloat(b);
+      var result1 = parseInt(a) / parseInt(result);
+      var result1 = parseFloat(a) / parseFloat(result);
+      var result2 = Math.sqrt(result1)
+      if (!isNaN(result2)) {
+        document.getElementById('txt6').value = result2;
+      }
+    };
+  </script>
+  <script>
+    function kbs2() {
+      var a = document.getElementById('txt7').value;
+      var b = document.getElementById('txt8').value;
+      var result = 3.142857143 * parseInt(b) ** 2;
+      var result = 3.142857143 * parseFloat(b) ** 2;
+      var result1 = parseInt(a) / parseInt(result);
+      var result1 = parseFloat(a) / parseFloat(result);
+      if (!isNaN(result1)) {
+        document.getElementById('txt9').value = result1;
+      }
+    };
+  </script>
+  
+
+</body>
+</html>
