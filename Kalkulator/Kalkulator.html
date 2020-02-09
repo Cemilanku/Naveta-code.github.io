@@ -55,7 +55,7 @@
 
 	#page-content-container {
     	width: 100%;
-    	position: absolute;
+    	position: fixed;
     	padding: 15px;
 		text-align: center;
 	}
@@ -128,114 +128,40 @@
 	  	overflow-y: hidden;
 	  	background-color: yellow;
     	background-size: 100%;
-		max-width: auto;
-		max-height: auto;
+		max-width: 100%;
     	overflow-x: unset;
-		position: fixed;
     }
-	#container {
-    	padding-left: 0;
-    	-webkit-transition: all 0.5s ease;
-    	-moz-transition: all 0.5s ease;
-    	-o-transition: all 0.5s ease;
-    	transition: all 0.5s ease;
-	}
-
-	#container.toggled {
-    	padding-left: 250px;
-	}
-
-	#sidebar {
-    	z-index: 1000;
-    	position: fixed;
-    	left: 250px;
-    	width: 0;
-    	height: 100%;
-    	margin-left: -250px;
-		margin-top: -52px;
-		overflow-x: hidden;
-	  	overflow-y: hidden;
-    	background: rgb(14, 73, 236);
-    	-webkit-transition: all 0.5s ease;
-    	-moz-transition: all 0.5s ease;
-    	-o-transition: all 0.5s ease;
-    	transition: all 0.5s ease;
-
-	}
-
-	#container.toggled #sidebar {
-    	width: 1281px;
-	}
-
-	#page-content-container {
-    	width: 100%;
-    	position: absolute;
-    	padding: 15px;
-		text-align: center;
-	}
-
-	#container.toggled #page-content-container {
-    	position: absolute;
-    	margin-right: -250px;
-		text-align: center;
-	}
-
-	.sidebar-nav {
-    	position: absolute;
-    	top: 0;
-    	width: 250px;
-    	margin: 0;
-    	padding: 0;
-    	list-style: none;
-	}
-
-	.sidebar-nav li {
-    	text-indent: 20px;
-    	line-height: 40px;
-	}
-
-	.sidebar-nav li a {
-    	display: block;
-    	text-decoration: none;
-    	color: #ffffff;
-    	font-weight: bold;
-	}
-	.sidebar-nav li h2 {
-    	display: block;
-    	text-decoration: none;
-    	color: #ffffff;
-    	font-weight: bold;
-	}
-
-	.sidebar-nav li a:hover {
-    	text-decoration: none;
-    	color: #fff;
-    	font-weight: bold;
-    	background: #d35400;
-	}
-
-	.sidebar-nav li a:active,
-	.sidebar-nav li a:focus {
-    	text-decoration: none;
-	}
 	.logo {
   		height:100px;
 		width: 100px;
 	}
-	.header{
-		width: 100%;
-		text-align: center;
-	}
-	.header h2{
-		font-size: 30px;
-	}
-	.warn{
-		margin-top: 150px;
-	}
-	.menu{
-		width: 64px;
-		height: 52px;
-	}}
+    #container {
+        padding-left: 250px;
+    }
+
+    #container.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar {
+		width: 620px;
+        height: 100%x;
+		margin-top: -52px;
+    }
+
+    #container.toggled #sidebar {
+        width: 0;
+    }
+
+    #page-content-container {
+        padding: 20px;
+        position: relative;
+    }
+
+    #container.toggled #page-content-container {
+        position: relative;
+        margin-right: 0;
+    }
 	
 }
 </style>
